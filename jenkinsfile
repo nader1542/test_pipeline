@@ -2,11 +2,6 @@ pipeline{
     agent any
     stages{
 
-        stage('git clone statge') { // for display purposes
-            steps{
-                git([url: 'https://github.com/nader1542/test_pipeline.git', branch: 'master'])
-            }
-        }
         stage ('clean install stage'){
             steps{
                 withMaven(maven : 'M3'){
