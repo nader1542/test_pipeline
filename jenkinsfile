@@ -1,7 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage ('compile stage'){
+
+        stage('git clone statge') { // for display purposes
+            steps{
+                git 'https://github.com/nader1542/test_pipeline.git'
+            }
+        }
+        stage ('clean install stage'){
             steps{
                 withMaven(maven : 'M3'){
                     sh 'mvn clean install -Dmaven.test.skip=true'
