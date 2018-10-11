@@ -4,7 +4,7 @@ pipeline{
 
         stage('git clone statge') { // for display purposes
             steps{
-                git 'https://github.com/nader1542/test_pipeline.git'
+                git url: 'https://github.com/nader1542/test_pipeline.git'
             }
         }
         stage ('clean install stage'){
