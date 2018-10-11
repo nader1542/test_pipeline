@@ -1,13 +1,19 @@
-pipeline{
-    agent any
-    stages{
+pipeline {
 
-        stage ('clean install stage'){
-            steps{
-                withMaven(maven : 'M3'){
-                    sh 'mvn clean install -Dmaven.test.skip=true'
-                }
-             }
+    agent any
+
+    stages {
+
+        stage(‘Build’) {
+
+            steps {
+
+                sh 'npm --version'
+
+            }
+
         }
+
     }
+
 }
