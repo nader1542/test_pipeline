@@ -8,7 +8,7 @@ pipeline {
 
             steps {
 
-                sh 'npm --version'
+                sh 'mvn clean install -Dmaven.test.skip=true'
 
             }
 
