@@ -20,7 +20,7 @@ pipeline {
         }
         stage('déploiement'){
             steps {
-                bat 'copy(file:"./target/*.jar", tofile:"C:\\apache-tomcat-8.5.34\\webapps")'
+                bat 'copy(file:".\\target\\*.jar", tofile:"C:\\apache-tomcat-8.5.34\\webapps")'
             }
         }
     }
