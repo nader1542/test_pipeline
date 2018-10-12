@@ -8,8 +8,8 @@ pipeline {
 
             steps {
 
-                dir("test_pipeline"){
-                    sh 'ls'
+               
+                sh 'ls'
                    
  
                 }
