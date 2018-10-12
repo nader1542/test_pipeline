@@ -14,7 +14,7 @@ pipeline {
   ) {
  
       // Run the maven build
-      sh "mvn clean install"
+      bat "mvn clean install"
  
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
 
