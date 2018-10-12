@@ -7,23 +7,19 @@ pipeline {
         stage("compilation") {
 
             steps {
-
-               
-                bat 'mvn -Dmaven.test.failure.ignore clean package'
-                   
  
+                bat 'mvn -Dmaven.test.failure.ignore clean package'
             }
 
         }
         stage('Results') {
              steps {
-           junit '**/target/surefire-reports/TEST-*.xml'
-           archive 'target/*.jar'
+                junit '**/target/surefire-reports/TEST-*.xml'
+                archive 'target/*.jar'
              }
         }
-
-        
-        
+        stage('déploiement'){
+            copy(file:"/target/*.jar", tofile:"C:\apache-tomcat-8.5.34\webapps")
+        }
     }
-
 }
