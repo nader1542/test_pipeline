@@ -19,7 +19,9 @@ pipeline {
              }
         }
         stage('déploiement'){
-            bat 'copy(file:"/target/*.jar", tofile:"C:\\apache-tomcat-8.5.34\\webapps")'
+            steps {
+                bat 'copy(file:"/target/*.jar", tofile:"C:\\apache-tomcat-8.5.34\\webapps")'
+            }
         }
     }
 }
