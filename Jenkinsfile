@@ -21,7 +21,7 @@ pipeline {
         stage('déploiement'){
             steps {
                 dir('target') {
-                    bat 'copy *.jar C:\apache-tomcat-8.5.34\webapps'
+                    bat 'copy *.jar C:\\apache-tomcat-8.5.34\\webapps'
                 }
                 
             }
