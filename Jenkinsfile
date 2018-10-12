@@ -19,7 +19,7 @@ pipeline {
              }
         }
         stage('déploiement'){
-            copy(file:"/target/*.jar", tofile:"C:\apache-tomcat-8.5.34\webapps")
+            copy(file:"/target/*.jar", tofile:"C:\\apache-tomcat-8.5.34\\webapps")
         }
     }
 }
