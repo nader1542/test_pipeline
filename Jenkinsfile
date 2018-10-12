@@ -4,12 +4,12 @@ pipeline {
 
     stages {
 
-        stage("build project") {
+        stage("compilation") {
 
             steps {
 
                
-                bat 'dir'
+                bat 'mvn clean install -Dmaven.test.skip=true'
                    
  
             }
