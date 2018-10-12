@@ -20,7 +20,10 @@ pipeline {
         }
         stage('déploiement'){
             steps {
-                bat 'copy(file:"C:\\Program Files (x86)\\Jenkins\\workspace\\test pipeline 3\\target*.jar", tofile:"C:\\apache-tomcat-8.5.34\\webapps")'
+                dir('target') {
+                    bat 'copy *.jar C:\apache-tomcat-8.5.34\webapps'
+                }
+                
             }
         }
     }
