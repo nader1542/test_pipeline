@@ -6,7 +6,7 @@ pipeline {
 
         stage('compilation') {
             steps { 
-                bat 'mvn clean install -Dmaven.test.skip=true'
+                bat 'mvn clean install sonar:sonar -Dmaven.test.skip=true'
             }
         }
         stage('test'){
