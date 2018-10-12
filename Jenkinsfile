@@ -10,7 +10,7 @@ pipeline {
 
                 dir("test_pipeline"){
                     sh 'ls'
-                    sh 'mvn clean verify
+                   
  
                 }
 
