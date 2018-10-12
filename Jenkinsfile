@@ -31,6 +31,7 @@ pipeline {
         stage('Démarrage du serveur'){
             steps {
                 dir('C:\\apache-tomcat-8.5.34\\bin') {
+                    bat 'shutdown.bat'
                     bat 'startup.bat'
                 }
                 
